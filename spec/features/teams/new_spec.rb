@@ -19,6 +19,5 @@ RSpec.describe "New Team Page" do
     click_on "Submit"
 
     expect(page).to have_content("Denver Destroyers")
-    save_and_open_page
   end
 end
