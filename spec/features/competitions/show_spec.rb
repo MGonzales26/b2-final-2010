@@ -33,10 +33,18 @@ RSpec.describe "Competition Show Page" do
       end
       it "shows the average age of all players in the competition" do
         visit competition_path(@rmt)
-
+        
         expect(page).to have_content(@rmt.players_avg_age)
       end
+      it "has a link to register a new team" do
+        visit competition_path(@rmt)
 
+        expect(page).to have_link("Register New Team")
+
+        click_on "Register New Team"
+
+        expect(current_path).to eq(new_competition_team_path(@rmt))
+      end
     end
   end
 end

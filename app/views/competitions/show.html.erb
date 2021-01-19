@@ -8,3 +8,5 @@
 <% @competition.teams.each do |team| %>
   <p><%= team.hometown %> <%= team.nickname%></p>
 <% end %>
+
+<%= link_to "Register New Team", new_competition_team_path(@competition) %>

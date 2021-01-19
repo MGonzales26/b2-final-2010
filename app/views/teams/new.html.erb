@@ -1,0 +1,7 @@
+<%= form_with method: :post, url: competition_teams_path(params[:competition_id]) do |f| %>
+  <%= f.label :hometown %>
+  <%= f.text_field :hometown %><br/><br/>
+  <%= f.label :nickname %>
+  <%= f.text_field :nickname %><br/><br/>
+  <%= f.submit 'Submit'%>
+<% end %>
